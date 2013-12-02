@@ -54,6 +54,7 @@
     <script type="text/javascript" src="js/handlebars.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/jquery.roomplan.js"></script>
+    <script type="text/javascript" src="js/jquery.details.js"></script>
 
 
     <script id="template-roomplan" type="text/x-handlebars-template">
@@ -77,6 +78,29 @@
         <div class="seat {{#if-eq category "vip"}}vip{{/if-eq}} {{#if-eq category "box"}}box{{/if-eq}} {{#if taken}}taken{{/if}}"
              data-role="seat"
              data-seat="{{@index}}">
+        </div>
+    </script>
+
+    <script id="template-details" type="text/x-handlebars-template">
+        <div class="highlight row">
+            <div class="col-md-6">
+                <b>Seat selected:</b>
+            </div>
+            <div class="col-md-6">
+                Row {{row}} Seat {{seat}}
+            </div>
+            <div class="col-md-6">
+                <b>Category:</b>
+            </div>
+            <div class="col-md-6">
+                {{category}}
+            </div>
+            <div class="col-md-6">
+                <b>Price:</b>
+            </div>
+            <div class="col-md-6">
+                {{price}} euro
+            </div>
         </div>
     </script>
   </body>
