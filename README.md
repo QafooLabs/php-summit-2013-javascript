@@ -6,7 +6,7 @@ This code is available here for every participant of the session to play and exp
 
 ## Setup
 
-To initialize the different variants of the example code [bower]() is needed, which in turn needs [nodejs]().
+To initialize the different variants of the example code [bower](http://bower.io/) is needed, which in turn needs [nodejs](http://nodejs.org).
 
 After installing **nodejs**. Please run the following command:
 
