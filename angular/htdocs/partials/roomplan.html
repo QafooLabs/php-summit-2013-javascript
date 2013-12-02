@@ -1,0 +1,14 @@
+<div class="roomplan">
+    <div class="row" ng-repeat="row in roomplan.rows">
+        <div class="rownumber">{{row.rownumber}}</div>
+        <div class="seat"
+             ng-repeat="seat in row.seats"
+             ng-class="{
+                         'vip': seat.category == 'vip', 'box': seat.category == 'box',
+                         'taken': seat.taken,
+                         'selected': selection === seat
+                       }"
+             ng-click="selectSeat(seat)">
+        </div>
+    </div>
+</div>
