@@ -54,5 +54,30 @@
     <script type="text/javascript" src="js/handlebars.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/jquery.roomplan.js"></script>
+
+
+    <script id="template-roomplan" type="text/x-handlebars-template">
+        <div class="roomplan">
+            {{#each rows}}
+                {{> row}}
+            {{/each}}
+        </div>
+    </script>
+
+    <script id="template-row" type="text/x-handlebars-template">
+        <div class="row" data-role="row" data-row="{{@index}}">
+            <div class="rownumber">{{rownumber}}</div>
+            {{#each seats}}
+                {{> seat}}
+            {{/each}}
+           </div>
+    </script>
+
+    <script id="template-seat" type="text/x-handlebars-template">
+        <div class="seat {{#if-eq category "vip"}}vip{{/if-eq}} {{#if-eq category "box"}}box{{/if-eq}} {{#if taken}}taken{{/if}}"
+             data-role="seat"
+             data-seat="{{@index}}">
+        </div>
+    </script>
   </body>
 </html>
