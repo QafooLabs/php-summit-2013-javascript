@@ -1,16 +1,3 @@
-var LocatorApp = angular.module("LocatorApp", []);
-
-LocatorApp.controller("RoomplanController", function($scope, $http) {
-    $scope.roomplan = {};
-    $scope.selection = null;
-
-    var requestPromise = $http.get("data/roomplan.json");
-
-    requestPromise.then(function(response) {
-        $scope.roomplan = response.data;
-    });
-});
-
 LocatorApp.directive("roomplan", function() {
     return {
         restrict: "AE",
@@ -22,7 +9,17 @@ LocatorApp.directive("roomplan", function() {
         controller: function($scope) {
             $scope.selectSeat = function(seat) {
                 $scope.selection = seat;
-            };
+            }
+        }
+    };
+});
+
+LocatorApp.directive("selectionDetails", function() {
+    return {
+        restrict: "AE",
+        templateUrl: "partials/details.html",
+        scope: {
+            "selection": "=ngModel"
         }
     };
 });

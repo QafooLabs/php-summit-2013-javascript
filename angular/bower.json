@@ -10,8 +10,7 @@
   ],
   "dependencies": {
     "bootstrap": "~3.0.2",
-    "jquery": "~2.0.3",
-    "handlebars": "~1.1.2",
-    "angular": "~1.2.3"
+    "angular": "*",
+    "angular-route": "~1.2.3"
   }
 }
