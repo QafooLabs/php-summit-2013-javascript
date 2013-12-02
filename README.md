@@ -10,7 +10,9 @@ To initialize the different variants of the example code [bower](http://bower.io
 
 After installing **nodejs**. Please run the following command:
 
-  npm install bower -g
-  
+````
+npm install bower -g
+````
+
 After that you may run `bower install` inside of each of the example code directories to install all needed libraries and dependencies.
 
