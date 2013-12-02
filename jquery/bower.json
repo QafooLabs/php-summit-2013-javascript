@@ -1,0 +1,16 @@
+{
+  "name": "php-summit-frontend-demo",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.2",
+    "jquery": "~2.0.3",
+    "handlebars": "~1.1.2"
+  }
+}
